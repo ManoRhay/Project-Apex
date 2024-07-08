@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex - Contato</title>
+    <link rel="stylesheet" href="apex-contato.css">
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
+    <header>
+        <div class="headerctn">
+            <div class="logo">
+                <img src=".\fotos\logo.png" alt="APEX+">
+            </div>
+            <nav class="nav-inicial">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="apex-sobre.html">Sobre</a></li>
+                    <li><a href="apex-historia.html">Apex-H</a></li>
+                    <li><a href="apex-contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="botoes">
+                <button class="registrar">Registrar</button>
+                <button class="login">Log In</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="contato">
+            <h1>Contato</h1>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                
+                <button type="enviar">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <img src="fotos\footlogo.png" alt="logofooter">
+        <div class="container">
+            <div class="row">
+                <div class="footer-content">
+                    <p>&copy; 2024 Project Apex+ by Rhayan Adriell<br>Powered by VSCode for Kick "Seu pontapé inicial".</p>
+                </div>
+                <div class="footer-content">
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="apex-sobre.html">Sobre</a></li>
+                        <li><a href="apex-contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="apex-home.js"></script>
+</body>
+</html>

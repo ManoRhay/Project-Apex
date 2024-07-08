@@ -1,0 +1,243 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Simulação de Load da Pagina */
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-top: 5px solid #5271ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Header da Pagina */
+
+header {
+    background-color: #5271ff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.headerctn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-inicial ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-inicial ul li {
+    margin: 0 15px;
+}
+
+.nav-inicial ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.nav-inicial ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.botoes .registrar,
+.botoes .login {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botoes .registrar:hover {
+    background-color: #5271ff;
+    color: #fff;
+}
+
+.botoes .login {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.botoes .login:hover {
+    background-color: #d40000;
+}
+
+/* Conteudo da Pagina */
+
+.all-cars {
+    padding: 20px;
+}
+
+.img {
+    width: 40%;
+}
+
+.carros-relembre {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-left: 10px solid;
+}
+
+.carros-relembre:nth-child(1) {
+    border-color: #2a3a8b;
+}
+
+.carros-relembre:nth-child(2) {
+    border-color: #00bfa5;
+}
+
+.carros-relembre:nth-child(3) {
+    border-color: #1a237e;
+}
+
+.carros-relembre:nth-child(4) {
+    border-color: #d32f2f;
+}
+
+.carros-relembre:nth-child(5) {
+    border-color: #ff6f00;
+}
+
+.carros-relembre h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.carros-relembre p {
+    color: #fff;
+}
+
+.carros-relembre img {
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.assistir-button {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+}
+
+.assistir-button:hover {
+    background-color: #fff;
+    color: #000;
+   
+}
+
+/* Footer da Pagina */
+
+.footer {
+    background-color: #2c2c2c;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer img {
+    width: 10%;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footer-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #007bff;
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 768px) {
+    .nav-inicial ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-inicial ul li {
+        margin: 10px 0;
+    }
+    .botoes {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+    .logo img {
+        height: 40px;
+    }
+    .botoes .registrar,
+    .botoes .login {
+        padding: 5px 10px;
+    }
+}

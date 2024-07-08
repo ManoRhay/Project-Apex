@@ -1,0 +1,193 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Simulação de Load da Pagina */
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-top: 5px solid #5271ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Header da Pagina */
+header {
+    background-color: #5271ff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.headerctn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-inicial ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-inicial ul li {
+    margin: 0 15px;
+}
+
+.nav-inicial ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.nav-inicial ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.botoes .registrar,
+.botoes .login {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botoes .registrar:hover {
+    background-color: #5271ff;
+    color: #fff;
+}
+
+.botoes .login {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.botoes .login:hover {
+    background-color: #d40000;
+}
+
+/* Estrutura do Sobre */
+
+.sobre {
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.sobre h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.sobre p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Footer da Pagina */
+
+.footer {
+    background-color: #2c2c2c;
+    padding-top: 100px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer img {
+    width: 10%;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footer-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #007bff;
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 768px) {
+    .nav-inicial ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-inicial ul li {
+        margin: 10px 0;
+    }
+    .botoes {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+    .logo img {
+        height: 40px;
+    }
+    .botoes .registrar,
+    .botoes .login {
+        padding: 5px 10px;
+    }
+}
